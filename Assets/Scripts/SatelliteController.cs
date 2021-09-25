@@ -19,5 +19,4 @@ public class SatelliteController : MonoBehaviour
     {
         satelliteMesh.GetComponent<Renderer>().material = material;
     }
-
 }
