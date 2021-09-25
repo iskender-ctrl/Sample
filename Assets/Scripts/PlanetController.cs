@@ -20,7 +20,7 @@ public class PlanetController : MonoBehaviour
     }
     void SetColor()
     {
-        planetMesh.GetComponent<Renderer>().material.color = planetColorPool[Random.Range(0, planetColorPool.Length - 1)];
+        planetMesh.GetComponent<Renderer>().material.color = planetColorPool[Random.Range(0, planetColorPool.Length)];
     }
     public bool HasFreeSpace()
     {
@@ -28,6 +28,7 @@ public class PlanetController : MonoBehaviour
     }
     public void AddSatellite(GameObject satellite)
     {
+        satellite.GetComponent<SatelliteController>().SetMaterial(planetMesh.GetComponent<Renderer>().material);
         satellites.Add(satellite);
     }
 }
