@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Planet
   - floor
+  - Satellite
   layers:
   - Default
   - TransparentFX

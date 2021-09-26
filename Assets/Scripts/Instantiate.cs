@@ -16,6 +16,8 @@ public class Instantiate : MonoBehaviour
     {
         InstantiateObjectDetection();
     }
+
+    
     private void InstantiateObjectDetection()
     {
         Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);

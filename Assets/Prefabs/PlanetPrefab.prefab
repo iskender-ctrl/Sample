@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033363903001343623}
   - component: {fileID: 6931316449243410691}
+  - component: {fileID: 1816039011542301367}
   m_Layer: 0
   m_Name: PlanetPrefab
   m_TagString: Planet
@@ -45,9 +46,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetMesh: {fileID: 3744943656957533636}
-  satelliteMesh: {fileID: 6207559820738091129, guid: 986efdd0f5885ba46b4d65b6a62a3fdc, type: 3}
   satelliteMaxSize: 5
   satellites: []
+--- !u!135 &1816039011542301367
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458389891254380721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.50566524
+  m_Center: {x: -0.01, y: 0.5, z: 0}
 --- !u!1 &3744943656957533636
 GameObject:
   m_ObjectHideFlags: 0

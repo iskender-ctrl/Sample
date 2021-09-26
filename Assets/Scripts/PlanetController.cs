@@ -28,7 +28,23 @@ public class PlanetController : MonoBehaviour
     }
     public void AddSatellite(GameObject satellite)
     {
+        satellite.GetComponent<SatelliteController>().SetPlanet(gameObject);
         satellite.GetComponent<SatelliteController>().SetMaterial(planetMesh.GetComponent<Renderer>().material);
         satellites.Add(satellite);
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Satellite")
+        {
+            for (int i = 0; i < satelliteMaxSize; i++)
+            {
+                Destroy(col.gameObject);
+                satellites.Remove(col.gameObject);
+                if (satellites.Count == 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 }

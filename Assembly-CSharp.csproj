@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\PlanetController.cs" />
      <Compile Include="Assets\Scripts\Instantiate.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.19f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
