@@ -7,24 +7,19 @@ public class SatelliteController : MonoBehaviour
 {
     public GameObject satelliteMesh;
     private GameObject planet;
-    public float Speed = 0f;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    public int Speed = 1;
     void Update()
     {
         if (planet)
         {
             transform.RotateAround(planet.transform.position, Vector3.up, Speed * Time.deltaTime);
-            transform.position = Vector3.MoveTowards(transform.position, planet.transform.position, 0.2f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, planet.transform.position, 0.5f * Time.deltaTime);
         }
         if (planet == null)
         {
             Destroy(gameObject);
         }
+        Speed = ((int)GameObject.FindGameObjectWithTag("Speed").GetComponent<Slider>().value);
     }
     public void SetMaterial(Material material)
     {

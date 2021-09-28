@@ -4,29 +4,30 @@ using UnityEngine;
 
 public class Instantiate : MonoBehaviour
 {
-    public GameObject PlanetPrefab;
+    public GameObject planetPrefab;
     public GameObject SatellitePrefab;
+    private GameObject planetPanel;
+    int clickCount;
     void Start()
     {
-
+        planetPanel = GameObject.FindGameObjectWithTag("PlanetPanel");
     }
-
-    // Update is called once per frame
     void Update()
     {
         InstantiateObjectDetection();
+        ClickPanel();
     }
 
-    
+
     private void InstantiateObjectDetection()
     {
         Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            GameObject planet = InstantiateObject(PlanetPrefab);
+            GameObject planet = InstantiateObject(planetPrefab);
             if (planet != null)
             {
-                //planet.GetComponent<Material>().color = Color.red;
+                return;
             }
         }
         if (Input.GetKeyDown(KeyCode.T))
@@ -87,7 +88,36 @@ public class Instantiate : MonoBehaviour
         {
             return new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
-
         return null;
+    }
+    public void ClickPanel()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, 100f))
+            {
+                if (hit.transform && hit.transform.tag == "Planet")
+                {
+                    hit.transform.GetComponent<PlanetController>().OpenPanel();
+                    clickCount++;
+                    
+                    if (clickCount % 2 == 0)
+                    {
+                        hit.transform.GetComponent<PlanetController>().ClosePanel();
+                    }
+                }
+                if (hit.transform && hit.transform.tag == "Destroy")
+                {
+                    hit.transform.GetComponent<PlanetController>().OnClickDestroy();
+                }
+                if (hit.transform && hit.transform.tag == "MaxSize")
+                {
+                    hit.transform.GetComponent<PlanetController>().OnClickSizeSatellite();
+                }
+            }
+        }
     }
 }
