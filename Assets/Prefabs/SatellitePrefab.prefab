@@ -143,7 +143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satelliteMesh: {fileID: 2336840756840612720}
+  explosionPrefabs: {fileID: 0}
   Speed: 1
+  destroyExplosion: {fileID: 6199910724757461288, guid: 3023e51893d90194faaca9ee7daa3cf0, type: 3}
 --- !u!54 &6349053944023740846
 Rigidbody:
   m_ObjectHideFlags: 0

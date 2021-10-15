@@ -302,6 +302,9 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.19f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 -r:"C:/Users/muitt/Sample/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Recorder.Base.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Recorder.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Recorder.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.ref.dll"
@@ -357,6 +360,16 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/True Explosions/System/Scripts/effects/exploderComponents/ExploderComponent.cs"
+"Assets/True Explosions/System/Scripts/effects/exploderComponents/LightComponent.cs"
+"Assets/True Explosions/System/Scripts/effects/exploderComponents/ParticleComponent.cs"
+"Assets/True Explosions/System/Scripts/effects/exploderComponents/PseudoVolumetricComponent.cs"
+"Assets/True Explosions/System/Scripts/effects/exploderComponents/VolumetricComponent.cs"
+"Assets/True Explosions/System/Scripts/effects/exploderComponents/VolumetricComponent2D.cs"
+"Assets/True Explosions/System/Scripts/effects/PseudoVolumetricExplosion.cs"
+"Assets/True Explosions/System/Scripts/exploders/Exploder.cs"
+"Assets/True Explosions/System/Scripts/exploders/Exploder2D.cs"
+"Assets/True Explosions/System/Scripts/exploders/SphereExploder.cs"
 -langversion:8.0
 
 /deterministic

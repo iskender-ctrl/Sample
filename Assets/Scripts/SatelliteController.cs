@@ -7,7 +7,9 @@ public class SatelliteController : MonoBehaviour
 {
     public GameObject satelliteMesh;
     private GameObject planet;
+    public GameObject explosionPrefabs;
     public int Speed = 1;
+    public Transform destroyExplosion;
     void Update()
     {
         if (planet)
@@ -28,6 +30,13 @@ public class SatelliteController : MonoBehaviour
     public void SetPlanet(GameObject planet)
     {
         this.planet = planet;
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Planet")
+        {
+            Destroy(Instantiate(destroyExplosion, transform.position, Quaternion.identity).gameObject, 3f);
+        }
     }
 }
 

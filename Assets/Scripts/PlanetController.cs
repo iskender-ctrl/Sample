@@ -12,6 +12,7 @@ public class PlanetController : MonoBehaviour
     public List<GameObject> satellites = new List<GameObject>();
     public GameObject panel;
     public TMP_InputField sizeMaxSatellite;
+    public Transform planetExplosion;
     void Start()
     {
         SetColor();
@@ -46,6 +47,7 @@ public class PlanetController : MonoBehaviour
                 satellites.Remove(col.gameObject);
                 if (satellites.Count == 0)
                 {
+                    Destroy(Instantiate(planetExplosion, transform.position, Quaternion.identity).gameObject, 3f);
                     Destroy(gameObject);
                 }
             }
